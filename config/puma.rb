@@ -33,3 +33,10 @@ pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
+
+# Activate the pumactl app to get access to puma stats
+activate_control_app
+
+# Export puma stats
+plugin :yabeda
+plugin :yabeda_prometheus

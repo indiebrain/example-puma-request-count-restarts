@@ -1,3 +1,13 @@
+GIT
+  remote: https://github.com/indiebrain/yabeda-puma-plugin
+  revision: f046c48451ebfcb0386b7f5e4ed70dcbfc0da2e1
+  branch: measure-requests-count
+  specs:
+    yabeda-puma-plugin (0.7.1)
+      json
+      puma
+      yabeda (~> 0.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -77,6 +87,8 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.6)
       public_suffix (>= 2.0.2, < 6.0)
+    anyway_config (2.6.3)
+      ruby-next-core (~> 1.0)
     base64 (0.2.0)
     bigdecimal (3.1.7)
     bindex (0.8.1)
@@ -100,6 +112,7 @@ GEM
       irb (~> 1.10)
       reline (>= 0.3.8)
     drb (2.2.1)
+    dry-initializer (3.1.1)
     erubi (1.12.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
@@ -116,6 +129,7 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    json (2.7.2)
     loofah (2.22.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.12.0)
@@ -152,6 +166,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.4-x86_64-linux)
       racc (~> 1.4)
+    prometheus-client (4.2.2)
     psych (5.1.2)
       stringio
     public_suffix (5.0.5)
@@ -202,6 +217,7 @@ GEM
     reline (0.5.3)
       io-console (~> 0.5)
     rexml (3.2.6)
+    ruby-next-core (1.0.3)
     rubyzip (2.3.2)
     selenium-webdriver (4.20.1)
       base64 (~> 0.2)
@@ -244,6 +260,14 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
+    yabeda (0.12.0)
+      anyway_config (>= 1.0, < 3)
+      concurrent-ruby
+      dry-initializer
+    yabeda-prometheus (0.9.1)
+      prometheus-client (>= 3.0, < 5.0)
+      rack
+      yabeda (~> 0.10)
     zeitwerk (2.6.13)
 
 PLATFORMS
@@ -269,6 +293,8 @@ DEPENDENCIES
   turbo-rails
   tzinfo-data
   web-console
+  yabeda-prometheus
+  yabeda-puma-plugin!
 
 RUBY VERSION
    ruby 3.3.1p55

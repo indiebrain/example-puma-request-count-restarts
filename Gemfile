@@ -14,6 +14,16 @@ gem "sqlite3", "~> 1.4"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 
+# Use yabeda-puma-plugin to expose puma stats metrics [https://github.com/yabeda-rb/yabeda-puma-plugin/]
+gem(
+  "yabeda-puma-plugin",
+  git: "https://github.com/indiebrain/yabeda-puma-plugin",
+  branch: "measure-requests-count"
+)
+
+# Use yabdeda-prometheus to export puma stats metrics [https://github.com/yabeda-rb/yabeda-prometheus]
+gem "yabeda-prometheus"
+
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem "importmap-rails"
 
